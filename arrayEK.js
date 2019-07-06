@@ -1,0 +1,1 @@
+var diccionarioEK = ["ez", "bai", "agur", "etxea", "kontuz", "ogia", "aita", "izeba", "ura", "musua", "txarra", "gabon"];
