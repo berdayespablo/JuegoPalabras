@@ -98,6 +98,11 @@ html, body {
     margin: 20px;
 }
 
+.active{
+    border: solid 2px rgb(1, 27, 83);
+    transform: scale(1.2);
+}
+
 #english{
     background-image: url("img/english.png");
 }
