@@ -428,35 +428,35 @@
         var fila6 = document.getElementsByClassName("b6");
 
         for(var i = 0 ; i < fila2.length; i++){
-            if(fila2[i].classList.contains("acierto") == false && fila2[i].classList.contains("aciertoPista") == false){
+            if(fila2[i].classList.contains("aciertoPista") == false){
                 fila2[i].classList.add("letraRendirse");
                 fila2[i].innerText = palabra2.charAt(i);
             }
         }
 
         for(var i = 0 ; i < fila3.length; i++){
-            if(fila3[i].classList.contains("acierto") == false && fila3[i].classList.contains("aciertoPista") == false){
+            if(fila3[i].classList.contains("aciertoPista") == false){
                 fila3[i].classList.add("letraRendirse");
                 fila3[i].innerText = palabra3.charAt(i);
             }
         }
 
         for(var i = 0 ; i < fila4.length; i++){
-            if(fila4[i].classList.contains("acierto") == false && fila4[i].classList.contains("aciertoPista") == false){
+            if(fila4[i].classList.contains("aciertoPista") == false){
                 fila4[i].classList.add("letraRendirse");
                 fila4[i].innerText = palabra4.charAt(i);
             }
         }
 
         for(var i = 0 ; i < fila5.length; i++){
-            if(fila5[i].classList.contains("acierto") == false && fila5[i].classList.contains("aciertoPista") == false){
+            if(fila5[i].classList.contains("aciertoPista") == false){
                 fila5[i].classList.add("letraRendirse");
                 fila5[i].innerText = palabra5.charAt(i);
             }
         }
 
         for(var i = 0 ; i < fila6.length; i++){
-            if(fila6[i].classList.contains("acierto") == false && fila6[i].classList.contains("aciertoPista") == false){
+            if(fila6[i].classList.contains("aciertoPista") == false){
                 fila6[i].classList.add("letraRendirse");
                 fila6[i].innerText = palabra6.charAt(i);
             }
