@@ -169,6 +169,28 @@ html, body {
     transform: scale(0.75);
 }
 
+.rendirse{
+    background-image: url("img/rendirse.png");
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.6);
+    margin-top: 10px;
+}
+
+.rendirse:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(0.75);
+}
+
+.letraRendirse{
+    background-color: rgb(211, 43, 43) !important;
+    color: white !important;
+}
+
 #confetti-canvas{
     width: 100%;
     height: 80%;

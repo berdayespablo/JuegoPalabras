@@ -12,47 +12,48 @@
     <canvas id="confetti-canvas" style="display: none"></canvas>
     <div id="contenedor">
         <div class="idiomas">
-            <div id="spanish" class="bandera" onclick="cargarIdioma('ES')"></div>
-            <div id="english" class="bandera" onclick="cargarIdioma('EN')"></div>
-            <div id="german" class="bandera" onclick="cargarIdioma('GE')"></div>
-            <div id="asturiano" class="bandera" onclick="cargarIdioma('AS')"></div>
-            <div id="euskera" class="bandera" onclick="cargarIdioma('EK')"></div>
+            <div id="spanish" title="Español" class="bandera" onclick="cargarIdioma('ES')"></div>
+            <div id="english" title="Inglés" class="bandera" onclick="cargarIdioma('EN')"></div>
+            <div id="german" title="Alemán" class="bandera" onclick="cargarIdioma('GE')"></div>
+            <div id="asturiano" title="Bable" class="bandera" onclick="cargarIdioma('AS')"></div>
+            <div id="euskera" title="Euskera" class="bandera" onclick="cargarIdioma('EK')"></div>
         </div>
-        <div class="wrapper patatas" id="contenedorLetras">
+        <div class="wrapper" id="contenedorLetras">
                 <div class="row" id="dosLetras">
-                    <div class="block" id="block1"></div>
-                    <div class="block" id="block2"></div>
+                    <div class="block b2" id="block1"></div>
+                    <div class="block b2" id="block2"></div>
                 </div>
                 <div class="row" id="tresLetras">
-                    <div class="block" id="block3"></div>
-                    <div class="block" id="block4"></div>
-                    <div class="block" id="block5"></div>
+                    <div class="block b3" id="block3"></div>
+                    <div class="block b3" id="block4"></div>
+                    <div class="block b3" id="block5"></div>
                 </div>
                 <div class="row" id="cuatroLetras">
-                    <div class="block" id="block6"></div>
-                    <div class="block" id="block7"></div>
-                    <div class="block" id="block8"></div>
-                    <div class="block" id="block9"></div>
+                    <div class="block b4" id="block6"></div>
+                    <div class="block b4" id="block7"></div>
+                    <div class="block b4" id="block8"></div>
+                    <div class="block b4" id="block9"></div>
                 </div>
                 <div class="row" id="cincoLetras">
-                    <div class="block" id="block10"></div>
-                    <div class="block" id="block11"></div>
-                    <div class="block" id="block12"></div>
-                    <div class="block" id="block13"></div>
-                    <div class="block" id="block14"></div>
+                    <div class="block b5" id="block10"></div>
+                    <div class="block b5" id="block11"></div>
+                    <div class="block b5" id="block12"></div>
+                    <div class="block b5" id="block13"></div>
+                    <div class="block b5" id="block14"></div>
                 </div>
                 <div class="row" id="seisLetras">
-                    <div class="block" id="block15"></div>
-                    <div class="block" id="block16"></div>
-                    <div class="block" id="block17"></div>
-                    <div class="block" id="block18"></div>
-                    <div class="block" id="block19"></div>
-                    <div class="block" id="block20"></div>
+                    <div class="block b6" id="block15"></div>
+                    <div class="block b6" id="block16"></div>
+                    <div class="block b6" id="block17"></div>
+                    <div class="block b6" id="block18"></div>
+                    <div class="block b6" id="block19"></div>
+                    <div class="block b6" id="block20"></div>
                 </div>
             </div>
             <div id="opciones">
                 <button type="button" onclick="comprobarPalabra()" class="botonComprobar">Comprobar</button>
-                <div type="button" onclick="darPista()" class="pista"></div>
+                <div type="button" title="Te daré una pista..." onclick="darPista()" class="pista"></div>
+                <div type="button" title="¿Te rindes?" onclick="rendirse()" class="rendirse"></div>
             </div>
     </div>
 
