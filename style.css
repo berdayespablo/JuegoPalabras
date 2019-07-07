@@ -90,8 +90,8 @@ html, body {
 }
 
 .bandera{
-    width: 140px;
-    height: 80px;
+    width: 130px;
+    height: 75px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -127,6 +127,24 @@ html, body {
 
 #euskera:hover{
     box-shadow: 3px 2px 40px -10px rgba(42,82,15,1);
+    cursor: pointer;
+}
+
+#asturiano{
+    background-image: url("img/asturiano.png");
+}
+
+#asturiano:hover{
+    box-shadow: 3px 2px 40px -10px rgb(0, 174, 255);
+    cursor: pointer;
+}
+
+#german{
+    background-image: url("img/german.png");
+}
+
+#german:hover{
+    box-shadow: 3px 2px 40px -10px rgb(12, 1, 1);
     cursor: pointer;
 }
 

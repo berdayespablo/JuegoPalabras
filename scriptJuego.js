@@ -189,7 +189,7 @@
                 }
                 break;
             default:
-                console.log('default');
+                console.log('No se ha encontrado en el diccionario');
             }
             
         }
@@ -238,6 +238,8 @@
             document.getElementById("spanish").classList.add("active");
             document.getElementById("english").classList.remove("active");
             document.getElementById("euskera").classList.remove("active");
+            document.getElementById("german").classList.remove("active");
+            document.getElementById("asturiano").classList.remove("active");
             break;
             case 'EN':
             diccionario = diccionarioEN;
@@ -245,6 +247,8 @@
             document.getElementById("spanish").classList.remove("active");
             document.getElementById("english").classList.add("active");
             document.getElementById("euskera").classList.remove("active");
+            document.getElementById("german").classList.remove("active");
+            document.getElementById("asturiano").classList.remove("active");
             break;
             case 'EK':
             diccionario = diccionarioEK;
@@ -252,7 +256,29 @@
             document.getElementById("spanish").classList.remove("active");
             document.getElementById("english").classList.remove("active");
             document.getElementById("euskera").classList.add("active");
+            document.getElementById("german").classList.remove("active");
+            document.getElementById("asturiano").classList.remove("active");
             break;
+            case 'GE':
+            diccionario = diccionarioGE;
+            pintarLetrasEnCasillas();
+            document.getElementById("spanish").classList.remove("active");
+            document.getElementById("english").classList.remove("active");
+            document.getElementById("euskera").classList.remove("active");
+            document.getElementById("german").classList.add("active");
+            document.getElementById("asturiano").classList.remove("active");
+            break;
+            case 'AS':
+            diccionario = diccionarioAS;
+            pintarLetrasEnCasillas();
+            document.getElementById("spanish").classList.remove("active");
+            document.getElementById("english").classList.remove("active");
+            document.getElementById("euskera").classList.remove("active");
+            document.getElementById("german").classList.remove("active");
+            document.getElementById("asturiano").classList.add("active");
+            break;
+            default:
+            console.log('No se ha podido cargar idioma');
         }
     }
 
@@ -348,7 +374,7 @@
                     break;
                 default:
                     console.log('No se ha podido dar pista');
-                }
+            }
         }
 
     }
