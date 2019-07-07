@@ -411,11 +411,21 @@
 
     function comprobarVictoria(){
         if(acierto2 == true && acierto3 == true && acierto4 == true && acierto5 == true && acierto6 == true){
+            var colorFondo = document.body.style.backgroundColor;
+
             document.getElementById("confetti-canvas").style.display = "block";
             document.getElementById("confetti-canvas").style.height = document.body.style.height;
             document.body.style.backgroundColor = "#A3FF99";
             startConfetti();
             
+            setTimeout(function(){ 
+                document.body.style.backgroundColor = colorFondo;
+                document.getElementById("confetti-canvas").style.display = "none";
+                startConfetti();
+
+                resetearTodo();
+                pintarLetrasEnCasillas();
+            }, 3000);
         }
     }
 
