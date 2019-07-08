@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Scrabble</title>
     <link rel="stylesheet" href="style.css">
@@ -11,6 +12,7 @@
 <body>
     <canvas id="confetti-canvas" style="display: none"></canvas>
     <div id="contenedor">
+            <h1 class="titulo1">Selecciona un idioma</h1>
         <div class="idiomas">
             <div id="spanish" title="Español" class="bandera" onclick="cargarIdioma('ES')"></div>
             <div id="english" title="Inglés" class="bandera" onclick="cargarIdioma('EN')"></div>
@@ -51,12 +53,14 @@
                 </div>
             </div>
             <div id="opciones">
-                <button type="button" onclick="comprobarPalabra()" class="botonComprobar">Comprobar</button>
                 <div type="button" title="Te daré una pista..." onclick="darPista()" class="pista"></div>
                 <div type="button" title="¿Te rindes?" onclick="rendirse()" class="rendirse"></div>
             </div>
     </div>
-
+    <audio id="myAudio">
+        <source src="aplausos.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
 <script src="arrays/arrayEN.js" type="text/javascript"></script>
 <script src="arrays/arrayEK.js" type="text/javascript"></script>
 <script src="arrays/arrayES.js" type="text/javascript"></script>

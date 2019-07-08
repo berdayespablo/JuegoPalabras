@@ -18,6 +18,8 @@
     var palabra5;
     var palabra6;
 
+    var sonidoAplausos = document.getElementById("myAudio"); 
+
     function pintarLetrasEnCasillas(){
     
     // Colección separada por número de letras
@@ -79,6 +81,7 @@
             cambiarPosiciones(valor1, valor2);
             click = 0;
             eliminarSeleccionada();
+            comprobarPalabra();
         }
     };
 
@@ -88,8 +91,6 @@
     }
 
     function cambiarPosiciones (div1, div2){
-        var divAux1 = div1;
-        var divAux2 = div2;
         var valueAux1 = div1.innerText;
         var valueAux2 = div2.innerText;
         div1.innerHTML = valueAux2;
@@ -235,52 +236,47 @@
             case 'ES':
             diccionario = diccionarioES;
             pintarLetrasEnCasillas();
-            document.getElementById("spanish").classList.add("active");
-            document.getElementById("english").classList.remove("active");
-            document.getElementById("euskera").classList.remove("active");
-            document.getElementById("german").classList.remove("active");
-            document.getElementById("asturiano").classList.remove("active");
+            activarDesactivarBandera("spanish");
             break;
             case 'EN':
             diccionario = diccionarioEN;
             pintarLetrasEnCasillas();
-            document.getElementById("spanish").classList.remove("active");
-            document.getElementById("english").classList.add("active");
-            document.getElementById("euskera").classList.remove("active");
-            document.getElementById("german").classList.remove("active");
-            document.getElementById("asturiano").classList.remove("active");
+            activarDesactivarBandera("english");
             break;
             case 'EK':
             diccionario = diccionarioEK;
             pintarLetrasEnCasillas();
-            document.getElementById("spanish").classList.remove("active");
-            document.getElementById("english").classList.remove("active");
-            document.getElementById("euskera").classList.add("active");
-            document.getElementById("german").classList.remove("active");
-            document.getElementById("asturiano").classList.remove("active");
+            activarDesactivarBandera("euskera");
             break;
             case 'GE':
             diccionario = diccionarioGE;
             pintarLetrasEnCasillas();
-            document.getElementById("spanish").classList.remove("active");
-            document.getElementById("english").classList.remove("active");
-            document.getElementById("euskera").classList.remove("active");
-            document.getElementById("german").classList.add("active");
-            document.getElementById("asturiano").classList.remove("active");
+            activarDesactivarBandera("german");
             break;
             case 'AS':
             diccionario = diccionarioAS;
             pintarLetrasEnCasillas();
-            document.getElementById("spanish").classList.remove("active");
-            document.getElementById("english").classList.remove("active");
-            document.getElementById("euskera").classList.remove("active");
-            document.getElementById("german").classList.remove("active");
-            document.getElementById("asturiano").classList.add("active");
+            activarDesactivarBandera("asturiano");
             break;
             default:
             console.log('No se ha podido cargar idioma');
         }
     }
+
+    function activarDesactivarBandera(idiomaActivar){
+        debugger
+        var idiomas = ["spanish", "english", "euskera", "german", "asturiano"];
+        document.getElementById(idiomaActivar).classList.add("active");
+        document.getElementById(idiomaActivar).classList.remove("inactive");
+        for (var i = 0; i <+ idiomas.length; i++) {
+            if(idiomas[i] != idiomaActivar){
+                document.getElementById(idiomas[i]).classList.remove("active");
+                document.getElementById(idiomas[i]).classList.add("inactive");
+            }
+        }
+
+    }
+
 
     function darPista(){
         if(clickPista < 5){
@@ -417,17 +413,26 @@
             document.getElementById("confetti-canvas").style.height = document.body.style.height;
             document.body.style.backgroundColor = "#A3FF99";
             startConfetti();
+            playAudio();
             
             setTimeout(function(){ 
                 document.body.style.backgroundColor = colorFondo;
                 document.getElementById("confetti-canvas").style.display = "none";
                 startConfetti();
-
+                stopAudio();
                 resetearTodo();
                 pintarLetrasEnCasillas();
-            }, 3000);
+            }, 5000);
         }
     }
+
+    function playAudio() { 
+        sonidoAplausos.play(); 
+    } 
+
+    function pauseAudio() { 
+        sonidoAplausos.pause(); 
+    } 
 
     function rendirse(){
         
