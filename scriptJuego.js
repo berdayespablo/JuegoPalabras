@@ -407,16 +407,17 @@
 
     function comprobarVictoria(){
         if(acierto2 == true && acierto3 == true && acierto4 == true && acierto5 == true && acierto6 == true){
-            var colorFondo = document.body.style.backgroundColor;
+            var colorFondo = document.getElementById("contenedor").style.backgroundColor;
 
             document.getElementById("confetti-canvas").style.display = "block";
             document.getElementById("confetti-canvas").style.height = document.body.style.height;
-            document.body.style.backgroundColor = "#A3FF99";
+
+            document.getElementById("contenedor").style.backgroundColor = "rgba(36, 255, 120, 0.096)";
             startConfetti();
             playAudio();
             
             setTimeout(function(){ 
-                document.body.style.backgroundColor = colorFondo;
+                document.getElementById("contenedor").style.backgroundColor = colorFondo;
                 document.getElementById("confetti-canvas").style.display = "none";
                 startConfetti();
                 stopAudio();
